@@ -1,0 +1,159 @@
+ .shouhang {
+     position: relative;
+     top: 7%;
+     right: -73%;
+ }
+
+ .aspan {
+     font-size: 35px;
+     font-weight: 700px;
+     color: #9c4355;
+ }
+
+ .asdf {
+     height: 100vh;
+     width: 100vw;
+     scroll-snap-type: y mandatory;
+     overflow-x: scroll;
+ }
+
+ section {
+     scroll-snap-align: center;
+     height: 100vh;
+     width: 100vw;
+ }
+
+ .asdf section:nth-child(1) {
+     background-image: url(../image/首页4.jpg);
+     background-size: cover;
+     height: 100vh;
+     width: 100vw;
+ }
+
+ .asdf section:nth-child(2) {
+     background-image: url(../image/首页2.png);
+     background-size: cover;
+     height: 100vh;
+     width: 100vw;
+ }
+
+ .asdf section:nth-child(3) {
+     background-image: url(../image/首页3.jpg);
+     background-size:cover;
+     height: 100vh;
+     width: 100vw;
+ }
+
+ .asdf section:nth-child(4) {
+     background-image: url(../image/主页/IMG_4723\(20211210-235429\).JPG);
+     background-size: cover;
+     height: 100vh;
+     width: 100vw;
+ }
+
+ #cursor {
+     /* 圆点鼠标*/
+     position: fixed;
+     top: -5px;
+     left: -5px;
+     width: 10px;
+     height: 10px;
+     background-color: rgb(0, 0, 0);
+     border-radius: 50%;
+     pointer-events: none;
+     z-index: 999;
+ }
+
+ #cursor-border {
+     /* 鼠标外圈*/
+     --size: 50px;
+     position: fixed;
+     top: calc(var(--size) / -2);
+     left: calc(var(--size) / -2);
+     width: var(--size);
+     height: var(--size);
+     border-radius: 50%;
+     /*圆角边框*/
+     box-shadow: 0 0 0 1px rgb(0, 0, 0);
+     /*阴影效果*/
+     pointer-events: none;
+     /*设置元素是否对指针事件做出反应*/
+     transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+         height 0.15s ease-out, background-color 0.15s ease-out;
+     z-index: 999;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ /*滚动图片*/
+ .gdtp {
+     width: 100vw;
+     position: relative;
+     top: -18%;
+ }
+
+ /*隐藏滚动条*/
+ ::-webkit-scrollbar {
+     display: none;
+     /* Chrome Safari */
+ }
+
+ /* span 的字体颜色 */
+ span {
+     color: 005a9e;
+ }
+
+ .nav1 {
+     width: 100%;
+     height: 55px;
+     background-color: rgba(255, 255, 255, 0.4);
+     position: absolute;
+ }
+
+ /* 加入我们、推出登入 */
+ .nav2 {
+     position: relative;
+     left: 35.5%;
+ }
+
+ /* 首页、个人简介、视频、图片集 */
+ .nav3 {
+     position: relative;
+     left: 8.148%;
+ }
+
+ .nav1 ul {
+     /* 设置flex布局（弹性布局） */
+     display: flex;
+     width: 750px;
+     margin: 0 auto;
+ }
+
+ .nav1 ul li {
+     flex: 1;
+     height: 55px;
+ }
+
+ .local_home a {
+     /* 设置flex布局（弹性布局） */
+     display: flex;
+     height: 55px;
+     /* 设置为为垂直方向，起点在上沿 */
+     flex-direction: column;
+     /*设置项目位于容器中间*/
+     align-items: center;
+     /*设置为居中排列*/
+     justify-content: center;
+     /* 设置过度效果 */
+     transition: 0.2s ease-in-out;
+     /* 字颜色 */
+     color: #0e4a97;
+ }
+
+ .local_home a:hover {
+     background-color: rgba(255, 255, 255, 0.8);
+     border-bottom: 3px solid #426696;
+     color: #0489ee;
+ }

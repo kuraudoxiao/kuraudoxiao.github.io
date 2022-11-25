@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    cursor: none;
+}
+
+body{
+    background-color: black;
+}
+
+#cursor{
+    /* 圆点鼠标*/
+    position:absolute;
+    top:-5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+#cursor-border{
+    /* 鼠标外圈*/
+    --size:50px;
+    position:absolute;
+    top:calc(var(--size) / -2);
+    left: calc(var(--size) / -2);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;  /*圆角边框*/
+    box-shadow: 0 0 0 1px white;  /*阴影效果*/
+    pointer-events: none;
+    transition: top 0.15s ease-out,left 0.15s ease-out,width 0.15s ease-out,
+    height 0.15s ease-out, background-color 0.15s ease-out;
+    z-index: 999;
+}
+
+
+.acs{ 
+    /* 设置按钮位置*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+input{
+      font-size: 2rem;
+      padding: 1rem 2rem;   
+      background-color: transparent;
+      color:#64ffda;
+      border: 1px solid #64ffda;
+      border-radius: 0;
+      /*框 重叠外阴影*/
+      box-shadow: 0 0 10px #64ffda, 0 0 10px #64ffda inset;
+      /*文字重叠外阴影*/
+      text-shadow: 0 0 5px #64ffda, 0 0 10px #64ffda;
+      /*设置过度样式： 0.3秒 快到慢*/
+      transition:0.3s ease-out;
+}
+input:hover{ /*设置鼠标触碰后的效果*/
+    color: black;
+    background-color: #64ffda;
+    border-color: #64ffda;
+    box-shadow: 0 0 80px #64ffda;
+}
+
+input:active{/*设置按钮按下的效果*/
+        /*按下后缩放的效果*/
+    transform: scale(.85);
+       /* 产生灯光聚焦的效果*/
+    box-shadow: 0 0 30px #64ffda;
+}
+
+input:nth-of-type(2){
+      /*设置左边距*/
+      margin-left: 30px;
+      color:white;
+      border: 1px soid white;
+      border-radius: 0;
+      /*框 重叠外阴影*/
+      box-shadow: 0 0 10px white, 0 0 10px white inset;
+      /*文字重叠外阴影*/
+      text-shadow: 0 0 5px white, 0 0 10px white;
+      /*设置过度样式： 0.3秒 快到慢*/
+      transition:0.3s ease-out;
+}
+
+input:nth-of-type(2):hover{ /*设置鼠标触碰后的效果*/
+    color: black;
+    background-color: white;
+    border-color:white;
+    box-shadow: 0 0 80px white;
+}
+
+input:nth-of-type(2):active{/*设置按钮按下的效果*/
+    /*按下后缩放的效果*/
+    transform: scale(.85);
+    /* 产生灯光聚焦的效果*/
+    box-shadow: 0 0 30px white;
+}

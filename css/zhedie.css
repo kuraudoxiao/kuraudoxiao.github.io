@@ -1,0 +1,92 @@
+.card
+{
+    position: relative;
+    left: 30%;
+    width: 500px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+    transition: 1s;
+}/*设置文本位置和框框*/
+
+.card:hover
+{
+    transform: translateX(50%);
+}
+
+.imgBox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin:left;
+    transform-style: preserve-3d;
+    background: #000;
+    transition: 1s;
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+}
+
+.card:hover .imgBox
+{
+    transform: rotateY(-180deg);
+}
+
+/*图片大小*/
+.card .imgBox .img1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height:400px;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility:hidden;
+}
+
+.card .imgBox .img1:nth-child(2)
+{
+    transform: rotateY( 180deg);
+}
+
+.card .details1 .img2
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 400px;
+
+}/*设置框框内的位置*/
+
+.card .details1 .content 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 第三页主要代码*/
+.a1{text-indent:1em;
+    display:inline-block; /*将元素类型装换为行内块元素*/
+    font-size:22px;
+    color:#5E2D00;
+   }
+   
+.a1:nth-child(1){text-indent:0;}/*设置第一个链接样式*/
+   
+.a1:link,a:visited{text-decoration:none;}/*文本装饰*/
+   
+.a1:hover{
+    text-decoration:underline;
+    color:#f03;
+}/*鼠标悬停时显示的状态*/
+          
+dl{display:none;}/*加载页面时隐藏*/
+  
+:target{display:block;}/*链接到的内容部分显示*/
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-select=0">
+    <link rel="stylesheet" href="../css/zuche.css" >
+    <title>注册界面</title>
+</head>
+<body>
+    <form action="登入界面.html ">
+    <div class="login">
+        <table width="600" cellpadding="5" cellspacing="5" >
+           <center> <span class="zucespan">麻烦填写一下注册信息哦</span> </center>
+            <tr>
+                <td   align="right" >用户名</td>
+                <td ><input  name="yhm" type="text" id="yhm" size="20" placeholder="用户名" required>（必填)</td>
+            </tr>
+            <tr>
+                <td   align="right" class="ziti">密 &nbsp;&nbsp;&nbsp;码 </td>
+                <td > <input name="mima" type="password" id="mima" size="20" maxlength="20" placeholder="密码" required>（必填)</td>
+            </tr>
+            <tr>
+                <td  align="right">确认密码</td>
+                <td  ><input name="qrm" id=qrm size="20" type="password" maxlenth="20"placeholder="确认密码" required>（必填）</td>
+            </tr>
+            <tr>
+                <td align="right">性&nbsp;&nbsp;&nbsp;别</td>
+                <td><input  type="radio" checked="checked" name="xb">男<input type="radio" name="xb">女</td>
+            </tr>
+            <tr>
+                <td align="right">Email</td>
+                <td><input name=youxiang placeholder="Emali" required>（必填)</td>
+            </tr>
+            <tr>
+                <td align="right">手机号</td>
+                <td><input name="sjh" id=sjh maxlength="11" size="20" required placeholder="手机号" 
+                    onchange="if(sjh.length!=11)
+                    {
+                        alert('输入的不是11位数');
+                        sjh.focus();
+                        return false;
+                    }else if(sjh.length==11){
+                        alert('手机号应该是11位数');
+                        sjh.focus();
+                        return false;
+                    }
+                    ">（必填）</td>
+            </tr>
+            <tr>
+                <td align="right">兴&nbsp;&nbsp;&nbsp;趣</td>
+                <td><input type="checkbox">打电动
+                    <input type="checkbox">不打电动
+                    <input type="checkbox">其他</td>
+            </tr>
+            <tr>
+                <td align="right">出生日期</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td align="right">家&nbsp;&nbsp;&nbsp;乡</td>
+                <td><select>
+                    <option>-请选择-</option>
+                    <option>中国</option>
+                    <option>中国</option>
+                    <option>中国</option>
+                </select>
+                </td></tr>
+                <tr>
+                    <td align="right">个人简介</td>
+                    <td><textarea cols="30" rows="5" placeholder="不许乱写"></textarea></td>
+                </tr>
+            <tr>
+                <td class="weizhi" colspan="2"><input type="submit" class="acs" value="提交"  onClick="
+                if(mima.value!=qrm.value)
+                {
+                 alert('两次输入密码不同');
+                mima.focus();
+                return false;
+                }else if(mima.value.length<6||qrm.value.length>10)
+                {
+                 alert('密码长度应位于6到10之间');
+                mima.focus();
+                return false;}else{alert('注册成功啦(๑‾ ꇴ ‾๑)');}">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="acs" type="reset"
+                value="重置"></td></tr>
+                <tr><td class="ziweizhi"><a href="../demo/登入界面.html" > 已有账号？点我登入</a> </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    <div style="position: absolute;top: 100%;left: 45%;">
+        <span style="color:aquamarine;">&copy;2021-2022 Kuraudoxiao</span>
+     </div>
+    <div id="cursor"></div> 
+    <div id="cursor-border"></div>
+<script>
+const cursor = document.querySelector("#cursor");
+    const cursorBorder = document.querySelector("#cursor-border");
+    const cursorPos = {x: 0,y: 0}
+    const cursorBorderPos = {x: 0,y: 0}
+
+document.addEventListener("mousemove",(e)=>{
+    cursorPos.x = e.clientX;
+    cursorPos.y = e.clientY;
+    cursor.style.transform = `translate(${e.clientX}px,${e.clientY}px)`;
+});
+
+requestAnimationFrame(function loop(){
+    const easting = 10;
+    cursorBorderPos.x +=(cursorPos.x - cursorBorderPos.x) / easting;
+    cursorBorderPos.y +=(cursorPos.y - cursorBorderPos.y) / easting;
+    cursorBorder.style.transform = `translate(${cursorBorderPos.x}px,${cursorBorderPos.y}px)`;
+    requestAnimationFrame(loop);
+});    
+
+    </script>
+</body>
+</html>

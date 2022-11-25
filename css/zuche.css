@@ -1,0 +1,95 @@
+*{
+    user-select: none;
+    /* 无法选择，整体感更强*/
+    cursor: none;
+         }
+
+         ::-webkit-scrollbar {
+            display: none; /* Chrome Safari */
+         }         
+         
+         body
+         {background: url(../image/注册.png) no-repeat;
+             background-size:cover;
+      background-attachment:fixed;
+         }
+ 
+         .login{
+             position: absolute;
+             top: 38%;
+             margin-top: -200px;
+             left: 50%;
+             margin-left: -200px;;
+             background-color: whitesmoke;opacity:0.6;
+             height: 560px;
+             width: 450px;
+             margin: 5;
+             padding-top: 20px;
+             border-radius: 25px;
+         }
+         
+         .weizhi{
+             position: absolute;
+             top: 85%;
+             left:36%;
+         }
+ 
+         .acs{
+             border-radius: 15%;
+         }
+ 
+         .acs:hover{
+            color: red;
+            box-shadow: 0px 0px 2px 0px black;
+         }
+
+         .zucespan{
+             font-size: 24px;
+             font-weight: 800;
+         }
+ 
+         .ziweizhi{
+            position: absolute;
+            left: 33%;
+            top: 91.5%;
+         }
+          
+         a{
+             text-decoration: none;
+         }
+         a:link{
+             color:rgb(97, 91, 91);
+         }
+         a:hover{
+             color: red;;  
+         }
+ 
+         #cursor{
+     /* 圆点鼠标*/
+     position:absolute;
+     top:-5px;
+     left: -5px;
+     width: 10px;
+     height: 10px;
+     background-color: white;
+     border-radius: 50%;
+     pointer-events: none;
+     z-index: 999;
+ }
+ 
+ #cursor-border{
+     /* 鼠标外圈*/
+     --size:50px;
+     position:absolute;
+     top:calc(var(--size) / -2);
+     left: calc(var(--size) / -2);
+     width: var(--size);
+     height: var(--size);
+     border-radius: 50%;  /*圆角边框*/
+     box-shadow: 0 0 0 1px white;  /*阴影效果*/
+     pointer-events: none;
+     transition: top 0.15s ease-out,left 0.15s ease-out,width 0.15s ease-out,
+     height 0.15s ease-out, background-color 0.15s ease-out;
+     z-index: 999;
+ }
+ 

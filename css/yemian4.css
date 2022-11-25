@@ -1,0 +1,26 @@
+.sy{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    position: relative;
+    bottom: 38.6%;
+    left: 1.7%;
+}
+
+.sy1{
+    width: 225px;
+    height: 50px;
+    display: none;
+    position: relative;
+    top: 23.5%;
+    left: 40%;
+}
+
+:target{display:block;}
+
+.sy2{
+    color:blue;
+    font-size: 18px;
+    
+}

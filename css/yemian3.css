@@ -1,0 +1,61 @@
+.nav{
+  text-align: center;
+}
+
+.looo{
+  position: relative;
+  top: 10%;
+  width: 100vw;
+  height: 600px;
+}
+
+.looo img{
+  height: 620px;
+  width: 7rem;
+  margin: 1rem;
+  
+  border-radius: 20rem;
+
+  /*将图片适应模式由fill转换为cover*/
+  object-fit: cover;
+}
+
+/*设置动画*/
+.looo strong:nth-child(1) img{
+  animation: swiper 15s infinite;
+}
+.looo strong:nth-child(2) img{
+  animation: swiper 15s 3s infinite;
+}
+.looo strong:nth-child(3) img{
+  animation: swiper 15s 6s infinite;
+}
+.looo strong:nth-child(4) img{
+  animation: swiper 15s 9s infinite;
+}
+.looo strong:nth-child(5) img{
+  animation: swiper 15s 12s infinite;
+}
+
+@keyframes swiper {
+  0%{
+    width: 8rem;
+    border-radius: 20rem;
+  }
+  2%{
+    width: 30rem;
+    border-radius: 3.6rem;
+  }
+  20%{
+    width: 30rem;
+    border-radius: 3.6rem;
+  }
+  22%{
+    width: 8rem;
+    border-radius: 20rem;
+  }
+  100%{
+    width: 8rem;
+    border-radius: 20rem;
+  }
+}

@@ -1,0 +1,135 @@
+.disno{
+    display: none;
+}
+
+:target{display:block;}/*链接到的内容部分显示*/
+
+/*第一个总架构*/
+.login1{
+    max-width: 300px;
+    max-height: 600px;
+    width: 300px;
+    height: 600px;
+    background-color: rgba(232, 253, 247,.8);
+    overflow: hidden;
+    position: relative;
+    top: 13.5%;
+    left: 14%;
+    border-radius: 8%;
+}
+
+.login1 a{
+    color: rgb(0, 0, 0);
+}
+
+.login1 a:hover{
+    color: #2992e2;
+}
+
+/*头像区域*/
+.login11{
+    border-radius: 8%;
+    background-color: rgba(255, 255,255,0.5);
+    height: 170px;
+    width: 300px;
+}
+
+.login11:hover{
+    background-color:rgb(103, 219, 223);
+}
+
+.login11 img{
+    position: relative;
+    left: 100px;
+    top: 10px;
+    border-radius: 80%;
+    height: 100px;
+    width: 100px;
+}
+
+
+.login11 .jsspan1{
+    position: relative;
+    top:10px;
+    left: 100px;
+}
+.login11 .jsspan2{
+    position: relative;
+    top:17px;
+    left:116px;
+}
+
+/*文字区域*/
+.login12{
+    padding-top: 5px;
+    border-radius: 8%;
+    height: 80px;
+}
+
+.login12 p{
+    text-align: center;
+    display: table-cell;
+    vertical-align:middle;
+    border-radius: 25px;
+    width: 300px;
+    height: 67.5px;
+    border: 20px;
+}
+
+.login12 p:hover{
+    background-color: rgb(103, 219, 223);
+}
+
+/*第二个总架构*/
+.login2{
+    background-color: rgba(208, 232, 219,0.8);
+    width: 800px;
+    height: 600px;
+    position: relative;
+    top: -65.2%;
+    left: 37%;
+    border-radius: 8%;
+}
+
+.touxiang{
+    height: 280px;
+    width: 300px;
+    border-radius:50%;
+    position: relative;
+    top: 50px;
+    left: 240px;
+}
+
+.ymimg{
+    height: 400px;
+    width: 600px;
+    position: relative;
+    top: 30px;
+    left: 100px;
+    border-radius: 10%;
+}
+
+.span1{
+    position: relative;
+    top: 90px;
+    left: 10%;
+    font-size: 24px;;
+    color: #b62f63;
+}
+
+.span2{
+    line-height: 190%;
+    position: relative;
+    top: 40px;
+    left: 15%;
+    color: #b62f63;
+    font-size: 17px;
+}
+
+.disno span{
+    position: relative;
+    top: 50px;
+    font-size: 17px;
+    padding-left: 100px;;
+    color: #b62f63;
+}
